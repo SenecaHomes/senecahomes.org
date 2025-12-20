@@ -222,3 +222,107 @@ footer {
     font-size: 1.5rem;
   }
 }
+
+/* =========================
+   Premium polish (brand-safe)
+   ========================= */
+
+body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+a { color: var(--tan); }
+a:hover { opacity: .92; }
+
+h1, h2, h3 { line-height: 1.12; }
+p { margin: 0.75rem 0; }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+}
+
+/* Hero background echoes the logo lines */
+.hero {
+  padding: 5.5rem 0 4.5rem;
+  background:
+    linear-gradient(90deg, rgba(194,160,120,.12), transparent 40%),
+    radial-gradient(900px 420px at 18% 18%, rgba(194,160,120,.18), transparent 60%),
+    radial-gradient(700px 320px at 90% 20%, rgba(255,255,255,.08), transparent 55%);
+}
+
+.cta { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.25rem; }
+
+.hero-card, .card {
+  box-shadow: 0 18px 55px rgba(0,0,0,.28);
+}
+
+/* Make “Seneca Homes” mark feel more like your logo */
+.logo {
+  font-weight: 700;
+}
+.logo-main, .logo-sub {
+  text-transform: uppercase;
+}
+.logo-main { color: var(--white); }
+.logo-sub { color: var(--white); opacity: .95; }
+.logo-box { box-shadow: inset 0 0 0 2px rgba(0,0,0,.15); }
+
+/* Buttons feel more premium */
+.btn {
+  border-radius: 2px;
+  font-weight: 700;
+}
+.btn:active { transform: translateY(1px); }
+
+/* Form upgrades */
+.hero-card h2 { margin-top: 0; }
+label { display: block; font-size: .9rem; letter-spacing: .03em; }
+
+input, textarea, select {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(194,160,120,.35);
+  color: var(--white);
+  border-radius: 2px;
+}
+
+input::placeholder, textarea::placeholder { color: rgba(247,247,247,.65); }
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--tan);
+  box-shadow: 0 0 0 3px rgba(194,160,120,.18);
+}
+
+/* Make section cards tighter and more consistent */
+.card h3 { margin-top: 0; }
+.card p { margin-bottom: 0; }
+
+/* Gallery cards look intentional */
+.placeholder {
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.06), rgba(0,0,0,.08));
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: .85rem;
+}
+
+/* Mobile nav opening */
+@media (max-width: 900px) {
+  .nav.nav-open {
+    display: block;
+    position: absolute;
+    right: 4%;
+    top: 68px;
+    background: rgba(44,65,84,.98);
+    padding: 1rem;
+    border: 2px solid rgba(194,160,120,.45);
+  }
+
+  .nav a {
+    display: block;
+    margin: .75rem 0;
+  }
+}
+
