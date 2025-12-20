@@ -1,4 +1,11 @@
-// Placeholder for future JS
-// Mobile menu, form handling, etc.
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".nav");
 
-console.log("Seneca Homes site loaded");
+  if (!btn || !nav) return;
+
+  btn.addEventListener("click", () => {
+    const open = nav.classList.toggle("nav-open");
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+});
