@@ -61,13 +61,13 @@ p { margin: .75rem 0; }
 }
 
 .logo-img img {
-  height: 56px; /* bigger */
+  height: 100px; /* bigger */
   width: auto;
   display: block;
 }
 
 @media (max-width: 900px) {
-  .logo-img img { height: 46px; }
+  .logo-img img { height: 100px; }
 }
 
 /* Menu button always visible */
@@ -392,3 +392,4 @@ footer {
     min-width: 220px;
   }
 }
+
