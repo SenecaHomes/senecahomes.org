@@ -56,6 +56,18 @@ p { margin: .75rem 0; }
   color: var(--white);
   font-weight: 700;
 }
+/* Logo image replacement */
+.logo-img img {
+  height: 36px;          /* adjust if needed */
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .logo-img img {
+    height: 32px;
+  }
+}
 
 .logo-box {
   width: 22px;
@@ -394,3 +406,4 @@ footer {
 
   .contact-grid { grid-template-columns: 1fr; }
 }
+
