@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Seneca Homes builds strong, clean, long-lasting fences. Wood, vinyl, aluminum, and chain-link fencing." />
-  <title>Seneca Homes | Fence Installation</title>
+  <meta name="description" content="Seneca Homes builds strong, clean, long-lasting fences in Lancaster County, Pennsylvania. Wood, vinyl, aluminum, and chain-link." />
+  <title>Seneca Homes | Fences in Lancaster County, PA</title>
 
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
@@ -12,118 +12,339 @@
 
 <header class="site-header">
   <div class="container header-inner">
-    <div class="logo">
+    <a class="logo" href="#top" aria-label="Seneca Homes Home">
       <span class="logo-main">SENECA</span>
-      <span class="logo-box"></span>
+      <span class="logo-box" aria-hidden="true"></span>
       <span class="logo-sub">HOMES</span>
-    </div>
+    </a>
 
-    <nav class="nav">
+    <nav class="nav" aria-label="Primary">
       <a href="#services">Services</a>
+      <a href="#types">Fence Types</a>
       <a href="#work">Work</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact" class="btn btn-small">Get Quote</a>
     </nav>
 
-    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
   </div>
 </header>
 
-<main>
+<main id="top">
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <span class="pill">Fence Specialists</span>
-      <h1>Built straight.<br>Built strong.</h1>
-      <p class="lead">
-        Seneca Homes specializes in professional fence installation and repair.
-        Clean lines, durable materials, and honest pricing.
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="pill">Fence Specialists • Lancaster County, PA</span>
+
+        <h1>Built straight.<br>Built strong.</h1>
+
+        <p class="lead">
+          Seneca Homes installs and repairs fences with clean lines, durable materials, and honest pricing.
+          <br><br>
+          <strong>Serving Lancaster County, Pennsylvania</strong> • Residential & light commercial
+        </p>
+
+        <div class="cta">
+          <a href="#contact" class="btn">Free Estimate</a>
+          <a href="tel:+10000000000" class="btn btn-outline">Call Now</a>
+        </div>
+
+        <p class="hero-sub">
+          Free estimates • Local crew • Clean work site • Gates included
+        </p>
+
+        <div class="trust">
+          <div class="trust-item">
+            <strong>Fast scheduling</strong>
+            <span>Clear timelines & communication</span>
+          </div>
+          <div class="trust-item">
+            <strong>Quality installs</strong>
+            <span>Posts set right, gates swing true</span>
+          </div>
+          <div class="trust-item">
+            <strong>Built to last</strong>
+            <span>Materials that hold up</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h2>Request an Estimate</h2>
+        <p class="muted">Send details and we’ll follow up quickly.</p>
+
+        <!-- NOTE: This is a basic form. To make it email you, use Formspree (see README). -->
+        <form class="form" id="quoteForm">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+
+          <label>
+            Phone
+            <input type="tel" name="phone" autocomplete="tel" inputmode="tel" required />
+          </label>
+
+          <label>
+            Email (optional)
+            <input type="email" name="email" autocomplete="email" />
+          </label>
+
+          <label>
+            Service Needed
+            <select name="service" required>
+              <option value="" disabled selected>Select…</option>
+              <option>New Fence</option>
+              <option>Fence Repair</option>
+              <option>Gate Install / Repair</option>
+              <option>Removal & Replacement</option>
+            </select>
+          </label>
+
+          <label>
+            Project Details (material, length, timeline)
+            <textarea name="details" rows="4" placeholder="Example: 6' privacy fence, ~120 ft, need done within a month" required></textarea>
+          </label>
+
+          <button class="btn full" type="submit">Send Request</button>
+
+          <p class="fineprint">
+            Prefer texting? Put “Text me” in the details.
+          </p>
+        </form>
+
+        <div class="contact-mini">
+          <a href="tel:+10000000000">📞 (000) 000-0000</a>
+          <a href="mailto:hello@senecahomes.com">✉️ hello@senecahomes.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2 class="section-title">Fence Services</h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>New fence installs</h3>
+          <p>Wood, vinyl, aluminum, and chain-link installations done clean and code-compliant.</p>
+          <ul class="list">
+            <li>Privacy • picket • decorative</li>
+            <li>Pet-safe options</li>
+            <li>Walk & driveway gates</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Fence repair</h3>
+          <p>Fix leaning posts, damaged panels, broken latches, and storm wear.</p>
+          <ul class="list">
+            <li>Post reset / replacement</li>
+            <li>Panel swaps</li>
+            <li>Hardware upgrades</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Removal & replacement</h3>
+          <p>Old fence removal, haul-away, and replacement without leaving a mess behind.</p>
+          <ul class="list">
+            <li>Clean teardown</li>
+            <li>Site prep</li>
+            <li>New install</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Why Seneca Homes</h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Local & reliable</h3>
+          <p>Based in Lancaster County — we understand local conditions, property lines, and expectations.</p>
+        </div>
+        <div class="card">
+          <h3>Clean, straight installs</h3>
+          <p>We aim for tight lines, solid posts, and gates that open/close smoothly for years.</p>
+        </div>
+        <div class="card">
+          <h3>Clear pricing</h3>
+          <p>No vague estimates. You’ll know what you’re paying for and what’s included.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FENCE TYPES -->
+  <section id="types" class="section">
+    <div class="container">
+      <h2 class="section-title">Fence Types</h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Privacy fences</h3>
+          <p>6’–8’ privacy fencing for backyards, pools, and property boundaries.</p>
+        </div>
+        <div class="card">
+          <h3>Picket & decorative</h3>
+          <p>Classic curb appeal with modern options that still feel solid and clean.</p>
+        </div>
+        <div class="card">
+          <h3>Pet & security fencing</h3>
+          <p>Strong, practical installs designed for pets, kids, and peace of mind.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK / GALLERY -->
+  <section id="work" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Recent Work</h2>
+      <p class="muted">Drop your project photos in here anytime — the layout is ready.</p>
+
+      <div class="gallery">
+        <div class="placeholder">Project Photo</div>
+        <div class="placeholder">Project Photo</div>
+        <div class="placeholder">Project Photo</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>1. Request an estimate</h3>
+          <p>Send a few details and we’ll respond quickly to schedule a look.</p>
+        </div>
+        <div class="card">
+          <h3>2. On-site evaluation</h3>
+          <p>We measure, discuss materials, and confirm the best plan for your yard.</p>
+        </div>
+        <div class="card">
+          <h3>3. Build day</h3>
+          <p>We show up on time, build it right, and leave the site clean.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Service Area</h2>
+      <p class="muted">
+        Serving <strong>Lancaster County, Pennsylvania</strong> and nearby areas.
+        If you’re close and not sure, reach out — we’ll tell you fast.
       </p>
 
-      <div class="cta">
-        <a href="#contact" class="btn">Free Estimate</a>
-        <a href="tel:+10000000000" class="btn btn-outline">Call Now</a>
+      <div class="chips">
+        <span class="chip">Lancaster</span>
+        <span class="chip">Lititz</span>
+        <span class="chip">Ephrata</span>
+        <span class="chip">Manheim</span>
+        <span class="chip">Elizabethtown</span>
+        <span class="chip">Mount Joy</span>
+        <span class="chip">New Holland</span>
+        <span class="chip">Strasburg</span>
+        <span class="chip">Willow Street</span>
+        <span class="chip">Quarryville</span>
       </div>
     </div>
+  </section>
 
-    <div class="hero-card">
-      <h2>Request an Estimate</h2>
-      <form>
-        <label>Name
-          <input type="text" required>
-        </label>
-        <label>Phone
-          <input type="tel" required>
-        </label>
-        <label>Service Needed
-          <select required>
-            <option value="">Select…</option>
-            <option>New Fence</option>
-            <option>Fence Repair</option>
-            <option>Gate Install</option>
-          </select>
-        </label>
-        <label>Details
-          <textarea rows="4"></textarea>
-        </label>
-        <button class="btn full">Send</button>
-      </form>
-    </div>
-  </div>
-</section>
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container">
+      <h2 class="section-title">FAQ</h2>
 
-<section id="services" class="section">
-  <div class="container">
-    <h2 class="section-title">Fence Services</h2>
+      <div class="faq">
+        <details>
+          <summary>How much does a fence cost?</summary>
+          <p>
+            Pricing depends on material, total length, terrain, gates, and removal needs.
+            The fastest way is a quick on-site measure — we’ll give a clear estimate.
+          </p>
+        </details>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Wood Fencing</h3>
-        <p>Privacy, picket, and custom wood fences built to last.</p>
-      </div>
-      <div class="card">
-        <h3>Vinyl Fencing</h3>
-        <p>Low-maintenance fencing with clean, modern lines.</p>
-      </div>
-      <div class="card">
-        <h3>Chain-Link & Aluminum</h3>
-        <p>Secure, code-compliant fencing for homes and properties.</p>
+        <details>
+          <summary>Do you install gates?</summary>
+          <p>
+            Yes — walk gates and larger driveway gate builds depending on materials and layout.
+          </p>
+        </details>
+
+        <details>
+          <summary>Do I need a permit?</summary>
+          <p>
+            Sometimes. It varies by township/borough and fence height/location. If a permit is required,
+            we’ll point you in the right direction.
+          </p>
+        </details>
+
+        <details>
+          <summary>How long does an install take?</summary>
+          <p>
+            Smaller jobs can be completed quickly; larger projects depend on linear feet and terrain.
+            We’ll give you a realistic timeline up front.
+          </p>
+        </details>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="work" class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">Recent Work</h2>
+  <!-- CONTACT -->
+  <section id="contact" class="section section-alt">
+    <div class="container contact-grid">
+      <div>
+        <h2 class="section-title">Contact</h2>
+        <p class="contact-text">
+          Serving homeowners across <strong>Lancaster County, Pennsylvania</strong>.
+          Call or message us to get started.
+        </p>
 
-    <div class="gallery">
-      <div class="placeholder">Project Photo</div>
-      <div class="placeholder">Project Photo</div>
-      <div class="placeholder">Project Photo</div>
+        <div class="contact-box">
+          <p><strong>Phone:</strong> (000) 000-0000</p>
+          <p><strong>Email:</strong> hello@senecahomes.com</p>
+          <p class="muted">Weekdays available • Weekend installs by request</p>
+        </div>
+
+        <div class="cta">
+          <a class="btn" href="tel:+10000000000">Call Now</a>
+          <a class="btn btn-outline" href="mailto:hello@senecahomes.com">Email Us</a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <h3>Ready for a quote?</h3>
+        <p class="muted">Use the form at the top or click below.</p>
+        <a class="btn full" href="#top">Go to Estimate Form</a>
+
+        <div class="tiny">
+          Tip: Add your fence style, approximate length, and desired timeline for the fastest estimate.
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-
-<section id="contact" class="section">
-  <div class="container">
-    <h2 class="section-title">Contact</h2>
-    <p class="contact-text">
-      Call or message us to get started on your fence project.
-    </p>
-
-    <div class="contact-box">
-      <p><strong>Phone:</strong> (000) 000-0000</p>
-      <p><strong>Email:</strong> hello@senecahomes.com</p>
-    </div>
-  </div>
-</section>
+  </section>
 
 </main>
 
 <footer>
   <div class="container footer-inner">
-    <p>© 2025 Seneca Homes</p>
+    <p>© 2025 Seneca Homes • Lancaster County, PA</p>
   </div>
 </footer>
 
