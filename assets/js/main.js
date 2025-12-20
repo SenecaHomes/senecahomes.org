@@ -8,4 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const open = nav.classList.toggle("nav-open");
     btn.setAttribute("aria-expanded", open ? "true" : "false");
   });
+
+  // Form fallback (until you wire Formspree):
+  // shows a friendly message instead of doing nothing.
+  const form = document.getElementById("quoteForm");
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Thanks! This form is ready — connect Formspree in the README so it emails you.");
+      form.reset();
+    });
+  }
 });
