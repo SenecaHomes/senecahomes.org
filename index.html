@@ -10,20 +10,31 @@
 </head>
 <body>
 
-<a class="logo logo-img" href="#top" aria-label="Seneca Homes Home">
-  <img src="images/logo.png" alt="Seneca Homes logo">
-</a>
+<header class="site-header">
+  <div class="container header-inner">
 
+    <!-- Left spacer keeps logo truly centered -->
+    <div class="header-spacer" aria-hidden="true"></div>
 
-    <nav class="nav" aria-label="Primary">
+    <!-- Centered Logo -->
+    <a class="logo logo-img" href="#top" aria-label="Seneca Homes Home">
+      <img src="images/logo.png" alt="Seneca Homes logo">
+    </a>
+
+    <!-- Menu button (dropdown for ALL sizes) -->
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="siteMenu">
+      Menu ▾
+    </button>
+
+    <!-- Dropdown Menu -->
+    <nav id="siteMenu" class="nav dropdown" aria-label="Primary">
       <a href="#services">Services</a>
       <a href="#types">Fence Types</a>
       <a href="#work">Work</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact" class="btn btn-small">Get Quote</a>
+      <a href="#contact" class="btn btn-small nav-cta">Get Quote</a>
     </nav>
 
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
   </div>
 </header>
 
@@ -72,7 +83,6 @@
         <h2>Request an Estimate</h2>
         <p class="muted">Send details and we’ll follow up quickly.</p>
 
-        <!-- NOTE: This is a basic form. To make it email you, use Formspree (see README). -->
         <form class="form" id="quoteForm">
           <label>
             Name
@@ -203,7 +213,7 @@
     </div>
   </section>
 
-  <!-- WORK / GALLERY -->
+  <!-- WORK -->
   <section id="work" class="section section-alt">
     <div class="container">
       <h2 class="section-title">Recent Work</h2>
@@ -239,30 +249,6 @@
     </div>
   </section>
 
-  <!-- SERVICE AREA -->
-  <section class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Service Area</h2>
-      <p class="muted">
-        Serving <strong>Lancaster County, Pennsylvania</strong> and nearby areas.
-        If you’re close and not sure, reach out — we’ll tell you fast.
-      </p>
-
-      <div class="chips">
-        <span class="chip">Lancaster</span>
-        <span class="chip">Lititz</span>
-        <span class="chip">Ephrata</span>
-        <span class="chip">Manheim</span>
-        <span class="chip">Elizabethtown</span>
-        <span class="chip">Mount Joy</span>
-        <span class="chip">New Holland</span>
-        <span class="chip">Strasburg</span>
-        <span class="chip">Willow Street</span>
-        <span class="chip">Quarryville</span>
-      </div>
-    </div>
-  </section>
-
   <!-- FAQ -->
   <section id="faq" class="section">
     <div class="container">
@@ -271,33 +257,22 @@
       <div class="faq">
         <details>
           <summary>How much does a fence cost?</summary>
-          <p>
-            Pricing depends on material, total length, terrain, gates, and removal needs.
-            The fastest way is a quick on-site measure — we’ll give a clear estimate.
-          </p>
+          <p>Pricing depends on material, length, terrain, gates, and removal. The fastest way is a quick measure for a clear estimate.</p>
         </details>
 
         <details>
           <summary>Do you install gates?</summary>
-          <p>
-            Yes — walk gates and larger driveway gate builds depending on materials and layout.
-          </p>
+          <p>Yes — walk gates and larger gate options depending on materials and layout.</p>
         </details>
 
         <details>
           <summary>Do I need a permit?</summary>
-          <p>
-            Sometimes. It varies by township/borough and fence height/location. If a permit is required,
-            we’ll point you in the right direction.
-          </p>
+          <p>Sometimes. It varies by township/borough and fence placement. If needed, we’ll point you the right direction.</p>
         </details>
 
         <details>
           <summary>How long does an install take?</summary>
-          <p>
-            Smaller jobs can be completed quickly; larger projects depend on linear feet and terrain.
-            We’ll give you a realistic timeline up front.
-          </p>
+          <p>Smaller jobs can be done quickly; larger projects depend on linear feet and terrain. We’ll set expectations up front.</p>
         </details>
       </div>
     </div>
@@ -305,34 +280,18 @@
 
   <!-- CONTACT -->
   <section id="contact" class="section section-alt">
-    <div class="container contact-grid">
-      <div>
-        <h2 class="section-title">Contact</h2>
-        <p class="contact-text">
-          Serving homeowners across <strong>Lancaster County, Pennsylvania</strong>.
-          Call or message us to get started.
-        </p>
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="muted"><strong>Serving Lancaster County, Pennsylvania.</strong> Call or message us to get started.</p>
 
-        <div class="contact-box">
-          <p><strong>Phone:</strong> (000) 000-0000</p>
-          <p><strong>Email:</strong> hello@senecahomes.com</p>
-          <p class="muted">Weekdays available • Weekend installs by request</p>
-        </div>
-
-        <div class="cta">
-          <a class="btn" href="tel:+10000000000">Call Now</a>
-          <a class="btn btn-outline" href="mailto:hello@senecahomes.com">Email Us</a>
-        </div>
+      <div class="contact-box">
+        <p><strong>Phone:</strong> (000) 000-0000</p>
+        <p><strong>Email:</strong> hello@senecahomes.com</p>
       </div>
 
-      <div class="contact-card">
-        <h3>Ready for a quote?</h3>
-        <p class="muted">Use the form at the top or click below.</p>
-        <a class="btn full" href="#top">Go to Estimate Form</a>
-
-        <div class="tiny">
-          Tip: Add your fence style, approximate length, and desired timeline for the fastest estimate.
-        </div>
+      <div class="cta">
+        <a class="btn" href="tel:+10000000000">Call Now</a>
+        <a class="btn btn-outline" href="mailto:hello@senecahomes.com">Email Us</a>
       </div>
     </div>
   </section>
@@ -348,4 +307,3 @@
 <script src="assets/js/main.js"></script>
 </body>
 </html>
-
