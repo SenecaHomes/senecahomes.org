@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Fence installation and replacement in Lancaster County, PA. Wood, vinyl, aluminum, and chain-link fences." />
+  <title>Seneca Homes | Fences</title>
+
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo-link" href="/" aria-label="Seneca Homes home">
+      <img class="site-logo" src="../images/logo.png" alt="Seneca Homes" />
+    </a>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+        Menu
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a class="nav-link" href="/">Home</a></li>
+        <li><a class="nav-link active" href="/fences/">Fences</a></li>
+        <li><a class="nav-link" href="/decks/">Decks</a></li>
+        <li><a class="nav-link" href="/homes/">Home Projects</a></li>
+        <li><a class="nav-link" href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Fences</h2>
+        <p>Installation, replacement, and repairs — built straight, sturdy, and clean.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Wood</h3>
+          <p>Privacy and picket options with solid posts and clean finish work.</p>
+        </article>
+
+        <article class="card">
+          <h3>Vinyl</h3>
+          <p>Low-maintenance fencing with crisp lines and durable hardware.</p>
+        </article>
+
+        <article class="card">
+          <h3>Aluminum / Chain-link</h3>
+          <p>Functional, secure solutions for yards, pets, and boundaries.</p>
+        </article>
+      </div>
+
+      <div style="height:14px"></div>
+
+      <div class="card">
+        <h3>Typical fence projects</h3>
+        <ul class="mini-list">
+          <li>New installs</li>
+          <li>Full replacements</li>
+          <li>Gate installs and upgrades</li>
+          <li>Post resets, sag fixes, latch/hardware fixes</li>
+        </ul>
+
+        <div style="height:12px"></div>
+        <a class="btn primary" href="/contact/">Request an estimate</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Seneca Homes. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('#navMenu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('open');
+    });
+  }
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

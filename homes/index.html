@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Home improvements and general contracting in Lancaster County, PA. Small-to-medium projects and repairs." />
+  <title>Seneca Homes | Home Projects</title>
+
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo-link" href="/" aria-label="Seneca Homes home">
+      <img class="site-logo" src="../images/logo.png" alt="Seneca Homes" />
+    </a>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+        Menu
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a class="nav-link" href="/">Home</a></li>
+        <li><a class="nav-link" href="/fences/">Fences</a></li>
+        <li><a class="nav-link" href="/decks/">Decks</a></li>
+        <li><a class="nav-link active" href="/homes/">Home Projects</a></li>
+        <li><a class="nav-link" href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Home Projects</h2>
+        <p>General contracting, repairs, and improvements — practical upgrades done clean.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Repairs</h3>
+          <p>Fix the annoying stuff properly — not temporary patches.</p>
+        </article>
+
+        <article class="card">
+          <h3>Exterior upgrades</h3>
+          <p>Rails, trim, gates, small builds, replacements, and cleanup.</p>
+        </article>
+
+        <article class="card">
+          <h3>Punch-list work</h3>
+          <p>Knock out the backlog: small projects that add up.</p>
+        </article>
+      </div>
+
+      <div style="height:14px"></div>
+
+      <div class="card">
+        <h3>Common requests</h3>
+        <ul class="mini-list">
+          <li>General improvements and repairs</li>
+          <li>Small builds and replacements</li>
+          <li>Outdoor cleanup and finishing work</li>
+        </ul>
+
+        <div style="height:12px"></div>
+        <a class="btn primary" href="/contact/">Request an estimate</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Seneca Homes. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('#navMenu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('open');
+    });
+  }
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact Seneca Homes for estimates in Lancaster County, PA." />
+  <title>Seneca Homes | Contact</title>
+
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo-link" href="/" aria-label="Seneca Homes home">
+      <img class="site-logo" src="../images/logo.png" alt="Seneca Homes" />
+    </a>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+        Menu
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a class="nav-link" href="/">Home</a></li>
+        <li><a class="nav-link" href="/fences/">Fences</a></li>
+        <li><a class="nav-link" href="/decks/">Decks</a></li>
+        <li><a class="nav-link" href="/homes/">Home Projects</a></li>
+        <li><a class="nav-link active" href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>Send the basics and we’ll follow up.</p>
+      </div>
+
+      <div class="contact-grid">
+        <form class="form" action="#" method="post">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+
+          <label>
+            Phone (optional)
+            <input type="tel" name="phone" autocomplete="tel" />
+          </label>
+
+          <label>
+            What do you need done?
+            <textarea name="message" rows="6" required placeholder="Fence / deck / home project details, approximate size, timeline, and location."></textarea>
+          </label>
+
+          <button class="btn primary" type="submit">Send</button>
+          <p class="muted small">This form is a placeholder. Tell me what you want to use (email link, Formspree, etc.) and I’ll wire it up.</p>
+        </form>
+
+        <div class="contact-card">
+          <h3>Quick info</h3>
+          <p><strong>Service area:</strong> Lancaster County, PA</p>
+          <p><strong>Work:</strong> Fences, decks, home projects</p>
+          <p class="muted">
+            If you want, we can add a click-to-call button, a map, and a quote-request flow.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Seneca Homes. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('#navMenu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('open');
+    });
+  }
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
