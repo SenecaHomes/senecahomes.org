@@ -7,6 +7,7 @@
   <title>Seneca Homes | Contracting</title>
 
   <link rel="stylesheet" href="/assets/css/styles.css" />
+  <script src="/assets/js/main.js" defer></script>
 </head>
 <body>
 
@@ -16,7 +17,11 @@
       <img class="brand-logo" src="/images/logo.png" alt="Seneca Homes" />
     </a>
 
-    <nav class="nav">
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" type="button">
+      ☰
+    </button>
+
+    <nav class="nav dropdown" aria-label="Primary navigation">
       <a class="nav-link is-active" href="/">Home</a>
       <a class="nav-link" href="/fences/">Fences</a>
       <a class="nav-link" href="/decks/">Decks</a>
