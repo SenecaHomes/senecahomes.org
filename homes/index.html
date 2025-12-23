@@ -2,96 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Home improvements and general contracting in Lancaster County, PA. Small-to-medium projects and repairs." />
-  <title>Seneca Homes | Home Projects</title>
-
-  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Home improvements and general contracting in Lancaster County, PA." />
+  <title>Home Projects | Seneca Homes</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
 <body>
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="logo-link" href="/" aria-label="Seneca Homes home">
-      <img class="site-logo" src="../images/logo.png" alt="Seneca Homes" />
-    </a>
-
-    <nav class="site-nav" aria-label="Primary navigation">
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu">
-        Menu
-      </button>
-
-      <ul class="nav-menu" id="navMenu">
-        <li><a class="nav-link" href="/">Home</a></li>
-        <li><a class="nav-link" href="/fences/">Fences</a></li>
-        <li><a class="nav-link" href="/decks/">Decks</a></li>
-        <li><a class="nav-link active" href="/homes/">Home Projects</a></li>
-        <li><a class="nav-link" href="/contact/">Contact</a></li>
-      </ul>
+    <a class="brand" href="/"><img class="brand-logo" src="/images/logo.png" alt="Seneca Homes" /></a>
+    <nav class="nav">
+      <a class="nav-link" href="/">Home</a>
+      <a class="nav-link" href="/fences/">Fences</a>
+      <a class="nav-link" href="/decks/">Decks</a>
+      <a class="nav-link is-active" href="/home-projects/">Home Projects</a>
+      <a class="nav-link" href="/contact/">Contact</a>
     </nav>
   </div>
 </header>
 
 <main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>Home Projects</h1>
+        <p>
+          Small-to-medium improvements, repairs, and general contracting projects—communicated clearly and finished clean.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="/contact/">Request an estimate</a>
+          <a class="btn btn-ghost" href="/#services">Back to services</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>Common requests</h3>
+        <ul>
+          <li>Repairs &amp; punch-list items</li>
+          <li>Trim, doors, and hardware</li>
+          <li>Small remodel support</li>
+          <li>General improvements</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="container">
-      <div class="section-head">
-        <h2>Home Projects</h2>
-        <p>General contracting, repairs, and improvements — practical upgrades done clean.</p>
-      </div>
+      <h2>How we work</h2>
+      <p class="muted">We keep it simple: scope, quote, schedule, clean finish.</p>
 
-      <div class="cards">
+      <div class="card-grid">
         <article class="card">
-          <h3>Repairs</h3>
-          <p>Fix the annoying stuff properly — not temporary patches.</p>
+          <h3>Clear scope</h3>
+          <p>We align on exactly what’s included before work starts.</p>
         </article>
-
         <article class="card">
-          <h3>Exterior upgrades</h3>
-          <p>Rails, trim, gates, small builds, replacements, and cleanup.</p>
+          <h3>Clean jobsite</h3>
+          <p>Respect the space and keep the work area organized.</p>
         </article>
-
         <article class="card">
-          <h3>Punch-list work</h3>
-          <p>Knock out the backlog: small projects that add up.</p>
+          <h3>Finish quality</h3>
+          <p>Details matter—edges, alignment, and final look.</p>
         </article>
-      </div>
-
-      <div style="height:14px"></div>
-
-      <div class="card">
-        <h3>Common requests</h3>
-        <ul class="mini-list">
-          <li>General improvements and repairs</li>
-          <li>Small builds and replacements</li>
-          <li>Outdoor cleanup and finishing work</li>
-        </ul>
-
-        <div style="height:12px"></div>
-        <a class="btn primary" href="/contact/">Request an estimate</a>
       </div>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <p>© <span id="year"></span> Seneca Homes. All rights reserved.</p>
+  <div class="container">
+    <p>© 2025 Seneca Homes. All rights reserved.</p>
   </div>
 </footer>
-
-<script>
-  const toggle = document.querySelector('.nav-toggle');
-  const menu = document.querySelector('#navMenu');
-  if (toggle && menu) {
-    toggle.addEventListener('click', () => {
-      const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!expanded));
-      menu.classList.toggle('open');
-    });
-  }
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
 
 </body>
 </html>
