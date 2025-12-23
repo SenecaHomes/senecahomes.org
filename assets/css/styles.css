@@ -63,13 +63,6 @@ a:hover{ text-decoration: underline; }
   display:block;
 }
 
-/* Keep mobile logo size as before-ish */
-@media (max-width: 640px){
-  .brand-logo{
-    height: 38px;        /* mobile */
-  }
-}
-
 .nav{
   display:flex;
   align-items:center;
@@ -83,6 +76,7 @@ a:hover{ text-decoration: underline; }
   border-radius: 12px;
   border: 1px solid transparent;
   color: rgba(255,255,255,0.88);
+  line-height: 1;
 }
 
 .nav-link:hover{
@@ -280,5 +274,80 @@ a:hover{ text-decoration: underline; }
 @media (max-width: 860px){
   .card-grid{
     grid-template-columns: 1fr;
+  }
+}
+
+/* ✅ MOBILE FIXES (this is what you want) */
+@media (max-width: 640px){
+  .container{
+    width: calc(100% - 28px);
+  }
+
+  /* Header becomes stacked + centered */
+  .header-inner{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 0 14px;
+  }
+
+  .brand{
+    justify-content: center;
+  }
+
+  .brand-logo{
+    height: 38px; /* keep your smaller mobile logo */
+  }
+
+  /* Nav becomes a clean grid instead of weird wraps */
+  .nav{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-content: stretch;
+  }
+
+  .nav-link{
+    width: 100%;
+    text-align: center;
+    padding: 12px 10px;
+    border: 1px solid rgba(255,255,255,0.14);
+    background: rgba(255,255,255,0.06);
+  }
+
+  .nav-link.is-active{
+    background: rgba(183,147,107,0.22);
+    border-color: rgba(183,147,107,0.55);
+  }
+
+  /* Tighten hero spacing so it doesn’t feel huge on phones */
+  .hero{
+    padding: 26px 0 18px;
+  }
+
+  .hero-copy h1{
+    font-size: 32px;
+  }
+
+  .hero-cta{
+    width: 100%;
+  }
+
+  /* Make CTAs look clean: two buttons per row if possible */
+  .btn{
+    flex: 1 1 calc(50% - 6px);
+    min-width: 140px;
+  }
+
+  /* Pills stack nicely */
+  .pill-row{
+    gap: 8px;
+  }
+
+  /* Card spacing */
+  .hero-card{
+    margin-top: 10px;
   }
 }
