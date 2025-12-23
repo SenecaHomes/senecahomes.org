@@ -2,94 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Seneca Homes provides reliable contracting services: fences, decks, home improvements, and repairs across Lancaster County, PA." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Seneca Homes — reliable contracting across fences, decks, and home projects in Lancaster County, PA." />
   <title>Seneca Homes | Contracting</title>
 
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
 <body>
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="logo-link" href="/" aria-label="Seneca Homes home">
-      <img class="site-logo" src="images/logo.png" alt="Seneca Homes" />
+    <a class="brand" href="/">
+      <img class="brand-logo" src="/images/logo.png" alt="Seneca Homes" />
     </a>
 
-    <nav class="site-nav" aria-label="Primary navigation">
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu">
-        Menu
-      </button>
-
-      <ul class="nav-menu" id="navMenu">
-        <li><a class="nav-link active" href="/">Home</a></li>
-        <li><a class="nav-link" href="/fences/">Fences</a></li>
-        <li><a class="nav-link" href="/decks/">Decks</a></li>
-        <li><a class="nav-link" href="/homes/">Home Projects</a></li>
-        <li><a class="nav-link" href="/contact/">Contact</a></li>
-      </ul>
+    <nav class="nav">
+      <a class="nav-link is-active" href="/">Home</a>
+      <a class="nav-link" href="/fences/">Fences</a>
+      <a class="nav-link" href="/decks/">Decks</a>
+      <a class="nav-link" href="/home-projects/">Home Projects</a>
+      <a class="nav-link" href="/contact/">Contact</a>
     </nav>
   </div>
 </header>
 
 <main>
   <section class="hero">
-    <div class="container hero-inner">
+    <div class="container hero-grid">
       <div class="hero-copy">
-        <h1>Reliable contracting. Clean work. Built to last.</h1>
+        <h1>Reliable contracting.<br/>Clean work. Built to last.</h1>
         <p>
-          Seneca Homes handles fences, decks, and home improvement projects with solid
-          materials, clear communication, and a finish you can be proud of.
+          Seneca Homes handles fences, decks, and home improvement projects with solid materials,
+          clear communication, and a finish you can be proud of.
         </p>
 
-        <div class="hero-actions">
-          <a class="btn primary" href="/contact/">Request an estimate</a>
-          <a class="btn ghost" href="/fences/">See services</a>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="/contact/">Request an estimate</a>
+          <a class="btn btn-ghost" href="#services">See services</a>
         </div>
 
-        <div class="hero-badges">
-          <div class="badge">Licensed & insured</div>
-          <div class="badge">Straightforward quotes</div>
-          <div class="badge">Lancaster County, PA</div>
+        <div class="pill-row">
+          <span class="pill">Licensed &amp; insured</span>
+          <span class="pill">Straightforward quotes</span>
+          <span class="pill">Lancaster County, PA</span>
         </div>
       </div>
 
       <div class="hero-card">
-        <h2>Quick links</h2>
-        <ul class="checklist">
-          <li><a class="nav-link" href="/fences/">Fence installation & replacement</a></li>
-          <li><a class="nav-link" href="/decks/">Deck builds & repairs</a></li>
-          <li><a class="nav-link" href="/homes/">Home improvements & general contracting</a></li>
-          <li><a class="nav-link" href="/contact/">Get an estimate</a></li>
+        <h3>Quick links</h3>
+        <ul>
+          <li><a href="/fences/">Fence installation &amp; replacement</a></li>
+          <li><a href="/decks/">Deck builds &amp; repairs</a></li>
+          <li><a href="/home-projects/">Home improvements &amp; general contracting</a></li>
+          <li><a href="/contact/">Get an estimate</a></li>
         </ul>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="services">
     <div class="container">
-      <div class="section-head">
-        <h2>What we do</h2>
-        <p>Pick a category to see details and options.</p>
-      </div>
+      <h2>What we do</h2>
+      <p class="muted">Pick a category to see details and options.</p>
 
-      <div class="cards">
+      <div class="card-grid">
         <article class="card">
           <h3>Fences</h3>
           <p>Privacy, picket, chain-link, vinyl, aluminum — done clean and sturdy.</p>
-          <a class="btn primary" href="/fences/">View fences</a>
+          <a class="btn btn-primary btn-small" href="/fences/">View fences</a>
         </article>
 
         <article class="card">
           <h3>Decks</h3>
           <p>New decks, rebuilds, railings, steps, and repairs for safety and comfort.</p>
-          <a class="btn primary" href="/decks/">View decks</a>
+          <a class="btn btn-primary btn-small" href="/decks/">View decks</a>
         </article>
 
         <article class="card">
           <h3>Home Projects</h3>
           <p>Small-to-medium improvements, repairs, and general contracting projects.</p>
-          <a class="btn primary" href="/homes/">View home projects</a>
+          <a class="btn btn-primary btn-small" href="/home-projects/">View home projects</a>
         </article>
       </div>
     </div>
@@ -97,23 +89,10 @@
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <p>© <span id="year"></span> Seneca Homes. All rights reserved.</p>
+  <div class="container">
+    <p>© 2025 Seneca Homes. All rights reserved.</p>
   </div>
 </footer>
-
-<script>
-  const toggle = document.querySelector('.nav-toggle');
-  const menu = document.querySelector('#navMenu');
-  if (toggle && menu) {
-    toggle.addEventListener('click', () => {
-      const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!expanded));
-      menu.classList.toggle('open');
-    });
-  }
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
 
 </body>
 </html>
