@@ -2,97 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Contact Seneca Homes for estimates in Lancaster County, PA." />
-  <title>Seneca Homes | Contact</title>
-
-  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Contact Seneca Homes for an estimate in Lancaster County, PA." />
+  <title>Contact | Seneca Homes</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
 <body>
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="logo-link" href="/" aria-label="Seneca Homes home">
-      <img class="site-logo" src="../images/logo.png" alt="Seneca Homes" />
-    </a>
-
-    <nav class="site-nav" aria-label="Primary navigation">
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu">
-        Menu
-      </button>
-
-      <ul class="nav-menu" id="navMenu">
-        <li><a class="nav-link" href="/">Home</a></li>
-        <li><a class="nav-link" href="/fences/">Fences</a></li>
-        <li><a class="nav-link" href="/decks/">Decks</a></li>
-        <li><a class="nav-link" href="/homes/">Home Projects</a></li>
-        <li><a class="nav-link active" href="/contact/">Contact</a></li>
-      </ul>
+    <a class="brand" href="/"><img class="brand-logo" src="/images/logo.png" alt="Seneca Homes" /></a>
+    <nav class="nav">
+      <a class="nav-link" href="/">Home</a>
+      <a class="nav-link" href="/fences/">Fences</a>
+      <a class="nav-link" href="/decks/">Decks</a>
+      <a class="nav-link" href="/home-projects/">Home Projects</a>
+      <a class="nav-link is-active" href="/contact/">Contact</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <p>Send the basics and we’ll follow up.</p>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>Contact</h1>
+        <p>
+          Send a quick message and we’ll follow up about scope, timing, and an estimate.
+        </p>
+
+        <div class="hero-cta">
+          <!-- Replace these with real contact info -->
+          <a class="btn btn-primary" href="mailto:info@senecahomes.org?subject=Estimate%20Request">Email</a>
+          <a class="btn btn-ghost" href="tel:+1-000-000-0000">Call</a>
+        </div>
+
+        <div class="pill-row">
+          <span class="pill">Lancaster County, PA</span>
+          <span class="pill">Fences • Decks • Home Projects</span>
+        </div>
       </div>
 
-      <div class="contact-grid">
-        <form class="form" action="#" method="post">
-          <label>
-            Name
-            <input type="text" name="name" autocomplete="name" required />
-          </label>
-
-          <label>
-            Email
-            <input type="email" name="email" autocomplete="email" required />
-          </label>
-
-          <label>
-            Phone (optional)
-            <input type="tel" name="phone" autocomplete="tel" />
-          </label>
-
-          <label>
-            What do you need done?
-            <textarea name="message" rows="6" required placeholder="Fence / deck / home project details, approximate size, timeline, and location."></textarea>
-          </label>
-
-          <button class="btn primary" type="submit">Send</button>
-        </form>
-
-        <div class="contact-card">
-          <h3>Quick info</h3>
-          <p><strong>Service area:</strong> Lancaster County, PA</p>
-          <p><strong>Work:</strong> Fences, decks, home projects</p>
-        </div>
+      <div class="hero-card">
+        <h3>What to include</h3>
+        <ul>
+          <li>Project type (fence/deck/home)</li>
+          <li>Address or general area</li>
+          <li>Photos if you have them</li>
+          <li>Timeline / urgency</li>
+        </ul>
       </div>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <p>© <span id="year"></span> Seneca Homes. All rights reserved.</p>
+  <div class="container">
+    <p>© 2025 Seneca Homes. All rights reserved.</p>
   </div>
 </footer>
-
-<script>
-  const toggle = document.querySelector('.nav-toggle');
-  const menu = document.querySelector('#navMenu');
-  if (toggle && menu) {
-    toggle.addEventListener('click', () => {
-      const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!expanded));
-      menu.classList.toggle('open');
-    });
-  }
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
 
 </body>
 </html>
