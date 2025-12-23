@@ -50,6 +50,7 @@ a:hover{ text-decoration: underline; }
   justify-content:space-between;
   gap:16px;
   padding: 14px 0;
+  position: relative; /* needed for mobile dropdown positioning */
 }
 
 .brand{
@@ -63,6 +64,7 @@ a:hover{ text-decoration: underline; }
   display:block;
 }
 
+/* Desktop nav (unchanged behavior) */
 .nav{
   display:flex;
   align-items:center;
@@ -89,6 +91,29 @@ a:hover{ text-decoration: underline; }
   background: rgba(183,147,107,0.18);
   border-color: rgba(183,147,107,0.45);
   color: rgba(255,255,255,0.95);
+}
+
+/* Hamburger button (hidden on desktop) */
+.menu-toggle{
+  display:none;
+  align-items:center;
+  justify-content:center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.92);
+  cursor:pointer;
+}
+
+.menu-toggle:hover{
+  background: rgba(255,255,255,0.10);
+}
+
+.menu-toggle:focus{
+  outline: 2px solid rgba(183,147,107,0.55);
+  outline-offset: 2px;
 }
 
 /* Hero */
@@ -277,52 +302,69 @@ a:hover{ text-decoration: underline; }
   }
 }
 
-/* ✅ MOBILE FIXES (this is what you want) */
+/* ============================
+   MOBILE DROPDOWN NAV (what you want)
+   ============================ */
 @media (max-width: 640px){
   .container{
     width: calc(100% - 28px);
   }
 
-  /* Header becomes stacked + centered */
+  /* Keep header row: logo left, hamburger right */
   .header-inner{
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 12px;
-    padding: 12px 0 14px;
-  }
-
-  .brand{
-    justify-content: center;
+    padding: 12px 0;
   }
 
   .brand-logo{
-    height: 38px; /* keep your smaller mobile logo */
+    height: 38px; /* keep smaller mobile logo */
   }
 
-  /* Nav becomes a clean grid instead of weird wraps */
-  .nav{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    justify-content: stretch;
+  /* Show hamburger */
+  .menu-toggle{
+    display:inline-flex;
   }
 
-  .nav-link{
+  /* Turn nav into dropdown panel */
+  .nav.dropdown{
+    display:none; /* closed by default */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 10px);
+    background: rgba(31,46,58,0.96);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 16px;
+    box-shadow: 0 22px 60px rgba(0,0,0,0.35);
+    padding: 10px;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 60;
+  }
+
+  /* Open state toggled by JS */
+  .nav.dropdown.nav-open{
+    display:flex;
+  }
+
+  .nav.dropdown .nav-link{
     width: 100%;
-    text-align: center;
-    padding: 12px 10px;
+    text-align: left;
+    padding: 14px 14px;
+    border-radius: 14px;
     border: 1px solid rgba(255,255,255,0.14);
     background: rgba(255,255,255,0.06);
   }
 
-  .nav-link.is-active{
+  .nav.dropdown .nav-link.is-active{
     background: rgba(183,147,107,0.22);
     border-color: rgba(183,147,107,0.55);
   }
 
-  /* Tighten hero spacing so it doesn’t feel huge on phones */
+  /* Prevent dropdown from pushing content (it floats) */
   .hero{
     padding: 26px 0 18px;
   }
@@ -331,69 +373,8 @@ a:hover{ text-decoration: underline; }
     font-size: 32px;
   }
 
-  .hero-cta{
-    width: 100%;
-  }
-
-  /* Make CTAs look clean: two buttons per row if possible */
   .btn{
     flex: 1 1 calc(50% - 6px);
     min-width: 140px;
   }
-
-  /* Pills stack nicely */
-  .pill-row{
-    gap: 8px;
-  }
-
-  /* Card spacing */
-  .hero-card{
-    margin-top: 10px;
-  }
 }
-
-/* ============================
-   MOBILE NAV FIX
-   ============================ */
-@media (max-width: 640px) {
-
-  /* Stack header content */
-  .header-inner {
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    padding: 14px 0 16px;
-  }
-
-  /* Center logo */
-  .brand {
-    justify-content: center;
-  }
-
-  .brand-logo {
-    height: 38px; /* clean mobile size */
-  }
-
-  /* Turn nav into button grid */
-  .nav {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-
-  .nav-link {
-    width: 100%;
-    text-align: center;
-    padding: 14px 10px;
-    border-radius: 14px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.14);
-  }
-
-  .nav-link.is-active {
-    background: rgba(183,147,107,0.22);
-    border-color: rgba(183,147,107,0.55);
-  }
-}
-
