@@ -222,3 +222,70 @@ footer {
     padding: 3rem 0;
   }
 }
+
+  .hero-cta{
+    width: 100%;
+  }
+
+  /* Make CTAs look clean: two buttons per row if possible */
+  .btn{
+    flex: 1 1 calc(50% - 6px);
+    min-width: 140px;
+  }
+
+  /* Pills stack nicely */
+  .pill-row{
+    gap: 8px;
+  }
+
+  /* Card spacing */
+  .hero-card{
+    margin-top: 10px;
+  }
+}
+
+/* ============================
+   MOBILE NAV FIX
+   ============================ */
+@media (max-width: 640px) {
+
+  /* Stack header content */
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 0 16px;
+  }
+
+  /* Center logo */
+  .brand {
+    justify-content: center;
+  }
+
+  .brand-logo {
+    height: 38px; /* clean mobile size */
+  }
+
+  /* Turn nav into button grid */
+  .nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 14px 10px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.14);
+  }
+
+  .nav-link.is-active {
+    background: rgba(183,147,107,0.22);
+    border-color: rgba(183,147,107,0.55);
+  }
+}
+
