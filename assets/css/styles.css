@@ -16,9 +16,8 @@
 }
 
 *{ box-sizing:border-box; }
-html, body {
-  min-height: 100%;
-}
+html, body { min-height: 100%; }
+
 body{
   margin:0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
@@ -211,6 +210,9 @@ a:hover{ text-decoration: underline; }
   font-size: 26px;
 }
 
+/* ============================
+   HERO BACKGROUND LAYERING
+   ============================ */
 body.has-hero-bg{
   position: relative;
   overflow-x: hidden;
@@ -238,8 +240,9 @@ body.has-hero-bg{
   }
 }
 
-/* MOBILE FALLBACK */
+/* MOBILE FALLBACK (FIXED) */
 @media (max-width: 768px){
+  /* Do NOT use background-attachment: fixed on mobile */
   body.has-hero-bg{
     background-image:
       radial-gradient(1200px 500px at 20% 0%, rgba(183,147,107,0.18), transparent 60%),
@@ -247,9 +250,21 @@ body.has-hero-bg{
       url("/images/hero-bg.png");
 
     background-size: auto, auto, cover;
-    background-position: center, center, center;
+    background-position: center, center, 50% 0%;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
+  }
+
+  /* Optional: keeps the “depth” vibe without fixed-attachment issues */
+  body.has-hero-bg::before{
+    content:"";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background: url("/images/hero-bg.png") center 0% / cover no-repeat;
+    opacity: 0.26;
+    transform: translateZ(0);
+    pointer-events: none;
   }
 }
 
@@ -261,6 +276,13 @@ body.has-hero-bg::after{
   z-index: -1;
   background: rgba(31,46,58,0.35);
   pointer-events: none;
+}
+
+/* Slightly stronger overlay on mobile */
+@media (max-width: 768px){
+  body.has-hero-bg::after{
+    background: rgba(31,46,58,0.45);
+  }
 }
 
 @keyframes heroBgDrift{
@@ -411,6 +433,26 @@ body.has-hero-bg::after{
   }
 }
 
+/* Extra mobile rhythm tweaks (match desktop feel tighter) */
+@media (max-width: 768px){
+  .section{
+    padding: 18px 0 40px;
+  }
+
+  .card{
+    padding: 14px;
+  }
+
+  .hero-card{
+    padding: 14px;
+  }
+
+  .pill{
+    padding: 7px 10px;
+    font-size: 11.5px;
+  }
+}
+
 /* ============================
    MOBILE DROPDOWN NAV (what you want)
    ============================ */
@@ -487,9 +529,3 @@ body.has-hero-bg::after{
     min-width: 140px;
   }
 }
-
-
-
-
-
-
