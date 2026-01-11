@@ -21,9 +21,11 @@ html, body { min-height: 100%; }
 body{
   margin:0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  background: radial-gradient(1200px 500px at 20% 0%, rgba(183,147,107,0.18), transparent 60%),
-              radial-gradient(900px 450px at 80% 20%, rgba(255,255,255,0.06), transparent 55%),
-              var(--navy);
+  /* default site background (non-hero pages, or if hero bg class missing) */
+  background:
+    radial-gradient(1200px 500px at 20% 0%, rgba(183,147,107,0.18), transparent 60%),
+    radial-gradient(900px 450px at 80% 20%, rgba(255,255,255,0.06), transparent 55%),
+    var(--navy);
   color: var(--text);
 }
 
@@ -60,12 +62,12 @@ a:hover{ text-decoration: underline; }
 }
 
 .brand-logo{
-  height: 46px;          /* desktop */
+  height: 46px; /* desktop */
   width: auto;
   display:block;
 }
 
-/* Desktop nav (unchanged behavior) */
+/* Desktop nav */
 .nav{
   display:flex;
   align-items:center;
@@ -117,15 +119,15 @@ a:hover{ text-decoration: underline; }
   outline-offset: 2px;
 }
 
-/* Prevent accidental double overlays */
-.hero::before,
-.hero::after{
-  content: none !important;
-}
-
 /* Hero */
 .hero{
   padding: 56px 0 28px;
+}
+
+/* IMPORTANT: prevent any old hero overlay pseudo-elements from stacking */
+.hero::before,
+.hero::after{
+  content: none !important;
 }
 
 .hero-grid{
@@ -217,77 +219,63 @@ a:hover{ text-decoration: underline; }
 }
 
 /* ============================
-   HERO BACKGROUND LAYERING
+   HERO BACKGROUND LAYERING (FIXED)
+   - one background layer
+   - one overlay layer
+   - NO duplicate gradients/images on mobile
    ============================ */
 body.has-hero-bg{
   position: relative;
   overflow-x: hidden;
+
+  /* kill the default body gradient stack so it doesn't double up */
+  background: var(--navy);
 }
 
-/* Desktop / full support */
+/* One background layer for ALL devices */
+body.has-hero-bg::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+
+  background-image:
+    radial-gradient(1200px 500px at 20% 0%, rgba(183,147,107,0.18), transparent 60%),
+    radial-gradient(900px 450px at 80% 20%, rgba(255,255,255,0.06), transparent 55%),
+    url("/images/hero-bg.png");
+
+  background-size: auto, auto, cover;
+  background-position: center, center, 50% 0%;
+  background-repeat: no-repeat;
+  opacity: 0.26;
+
+  /* keep rendering stable on mobile */
+  transform: translateZ(0);
+  pointer-events: none;
+}
+
+/* Desktop only: gentle drift animation */
 @media (min-width: 769px){
   body.has-hero-bg::before{
-    content:"";
-    position: fixed;
-    inset: 0;
-    z-index: -2;
-
-    background-image:
-      radial-gradient(1200px 500px at 20% 0%, rgba(183,147,107,0.18), transparent 60%),
-      radial-gradient(900px 450px at 80% 20%, rgba(255,255,255,0.06), transparent 55%),
-      url("/images/hero-bg.png");
-
-    background-size: auto, auto, cover;
-    background-position: center, center, 50% 0%;
-    background-repeat: no-repeat;
-    opacity: 0.26;
-
     animation: heroBgDrift 38s linear infinite;
   }
 }
 
-/* MOBILE FALLBACK (FIXED) */
-@media (max-width: 768px){
-  /* Do NOT use background-attachment: fixed on mobile */
-  body.has-hero-bg{
-    background-image:
-      radial-gradient(1200px 500px at 20% 0%, rgba(183,147,107,0.18), transparent 60%),
-      radial-gradient(900px 450px at 80% 20%, rgba(255,255,255,0.06), transparent 55%),
-      url("/images/hero-bg.png");
-
-    background-size: auto, auto, cover;
-    background-position: center, center, 50% 0%;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-  }
-
-  /* Optional: keeps the “depth” vibe without fixed-attachment issues */
-  body.has-hero-bg::before{
-    content:"";
-    position: fixed;
-    inset: 0;
-    z-index: -2;
-    background: url("/images/hero-bg.png") center 0% / cover no-repeat;
-    opacity: 0.26;
-    transform: translateZ(0);
-    pointer-events: none;
-  }
-}
-
-/* Overlay for readability (all devices) */
+/* Single overlay for readability (all devices) */
 body.has-hero-bg::after{
   content:"";
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: rgba(31,46,58,0.35);
+  /* lighter than your screenshot (removes the “extra overlay” look) */
+  background: rgba(31,46,58,0.22);
   pointer-events: none;
 }
 
-/* Slightly stronger overlay on mobile */
+/* Mobile: a touch stronger but still NOT milky */
 @media (max-width: 768px){
   body.has-hero-bg::after{
-    background: rgba(31,46,58,0.45);
+    background: rgba(31,46,58,0.26);
   }
 }
 
@@ -439,7 +427,7 @@ body.has-hero-bg::after{
   }
 }
 
-/* Extra mobile rhythm tweaks (match desktop feel tighter) */
+/* Extra mobile rhythm tweaks */
 @media (max-width: 768px){
   .section{
     padding: 18px 0 40px;
@@ -460,7 +448,7 @@ body.has-hero-bg::after{
 }
 
 /* ============================
-   MOBILE DROPDOWN NAV (what you want)
+   MOBILE DROPDOWN NAV
    ============================ */
 @media (max-width: 640px){
   .container{
@@ -535,4 +523,3 @@ body.has-hero-bg::after{
     min-width: 140px;
   }
 }
-
