@@ -59,6 +59,9 @@
           <li>Deck crew / carpenter</li>
           <li>General labor</li>
           <li>Driver / material runner</li>
+          <li>Team leader</li>
+          <li>Project Manager</li>
+          <li>Sales Manager</li>
         </ul>
       </div>
     </div>
@@ -110,3 +113,4 @@
 
 </body>
 </html>
+
