@@ -27,59 +27,6 @@ body{
               var(--navy);
   color: var(--text);
 }
-body.has-hero-bg{
-  position: relative;
-  overflow-x: hidden;
-}
-
-/* Background image layer */
-body.has-hero-bg::before{
-  content:"";
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-
-  background-image:
-    radial-gradient(1200px 500px at 20% 0%, rgba(183,147,107,0.18), transparent 60%),
-    radial-gradient(900px 450px at 80% 20%, rgba(255,255,255,0.06), transparent 55%),
-    url("/images/hero-bg.png");
-  background-size:
-    auto,
-    auto,
-    cover;
-  background-position:
-    center,
-    center,
-    50% 0%;
-  background-repeat:
-    no-repeat,
-    no-repeat,
-    no-repeat;
-
-  opacity: 0.26;           /* adjust to taste */
-  filter: saturate(1.05) contrast(1.05);
-  transform: translateZ(0); /* helps smoothness */
-  animation: heroBgDrift 38s linear infinite;
-}
-
-/* Optional dark overlay so text stays readable */
-body.has-hero-bg::after{
-  content:"";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background: rgba(31,46,58,0.35);
-}
-
-@keyframes heroBgDrift{
-  0%   { background-position: center, center, 50% 0%; }
-  100% { background-position: center, center, 50% 100%; }
-}
-
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce){
-  body.has-hero-bg::before{ animation: none; }
-}
 
 a{ color: inherit; text-decoration: none; }
 a:hover{ text-decoration: underline; }
@@ -234,59 +181,7 @@ a:hover{ text-decoration: underline; }
   letter-spacing: 0.02em;
   color: rgba(255,255,255,0.92);
 }
-body.has-hero-bg{
-  position: relative;
-  overflow-x: hidden;
-}
 
-/* Background image layer */
-body.has-hero-bg::before{
-  content:"";
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-
-  background-image:
-    radial-gradient(1200px 500px at 20% 0%, rgba(183,147,107,0.18), transparent 60%),
-    radial-gradient(900px 450px at 80% 20%, rgba(255,255,255,0.06), transparent 55%),
-    url("/images/hero-bg.png");
-  background-size:
-    auto,
-    auto,
-    cover;
-  background-position:
-    center,
-    center,
-    50% 0%;
-  background-repeat:
-    no-repeat,
-    no-repeat,
-    no-repeat;
-
-  opacity: 0.26;           /* adjust to taste */
-  filter: saturate(1.05) contrast(1.05);
-  transform: translateZ(0); /* helps smoothness */
-  animation: heroBgDrift 38s linear infinite;
-}
-
-/* Optional dark overlay so text stays readable */
-body.has-hero-bg::after{
-  content:"";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background: rgba(31,46,58,0.35);
-}
-
-@keyframes heroBgDrift{
-  0%   { background-position: center, center, 50% 0%; }
-  100% { background-position: center, center, 50% 100%; }
-}
-
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce){
-  body.has-hero-bg::before{ animation: none; }
-}
 .hero-card ul{
   margin: 0;
   padding-left: 18px;
@@ -314,6 +209,63 @@ body.has-hero-bg::after{
 .section h2{
   margin: 0 0 6px;
   font-size: 26px;
+}
+
+body.has-hero-bg{
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Desktop / full support */
+@media (min-width: 769px){
+  body.has-hero-bg::before{
+    content:"";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+
+    background-image:
+      radial-gradient(1200px 500px at 20% 0%, rgba(183,147,107,0.18), transparent 60%),
+      radial-gradient(900px 450px at 80% 20%, rgba(255,255,255,0.06), transparent 55%),
+      url("/images/hero-bg.png");
+
+    background-size: auto, auto, cover;
+    background-position: center, center, 50% 0%;
+    background-repeat: no-repeat;
+    opacity: 0.26;
+
+    animation: heroBgDrift 38s linear infinite;
+  }
+}
+
+/* MOBILE FALLBACK */
+@media (max-width: 768px){
+  body.has-hero-bg{
+    background-image:
+      radial-gradient(1200px 500px at 20% 0%, rgba(183,147,107,0.18), transparent 60%),
+      radial-gradient(900px 450px at 80% 20%, rgba(255,255,255,0.06), transparent 55%),
+      url("/images/hero-bg.png");
+
+    background-size: auto, auto, cover;
+    background-position: center, center, center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+}
+
+/* Overlay for readability (all devices) */
+body.has-hero-bg::after{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: rgba(31,46,58,0.35);
+  pointer-events: none;
+}
+
+@keyframes heroBgDrift{
+  from { background-position: center, center, 50% 0%; }
+  to   { background-position: center, center, 50% 100%; }
 }
 
 .muted{
@@ -535,6 +487,7 @@ body.has-hero-bg::after{
     min-width: 140px;
   }
 }
+
 
 
 
