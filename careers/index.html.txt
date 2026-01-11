@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Careers at Seneca Homes — steady work, room to grow, and a crew that takes pride in clean builds." />
+  <title>Careers | Seneca Homes</title>
+
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <script src="/assets/js/main.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/"><img class="brand-logo" src="/images/logo.png" alt="Seneca Homes" /></a>
+
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" type="button">
+      ☰
+    </button>
+
+    <nav class="nav dropdown" aria-label="Primary navigation">
+      <a class="nav-link" href="/">Home</a>
+      <a class="nav-link" href="/fences/">Fences</a>
+      <a class="nav-link" href="/decks/">Decks</a>
+      <a class="nav-link" href="/home-projects/">Home Projects</a>
+      <a class="nav-link" href="/contact/">Contact</a>
+      <a class="nav-link is-active" href="/careers/">Careers</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>Careers</h1>
+        <p>
+          We’re building a crew that takes pride in clean work and solid results. If you want steady hours,
+          competitive pay, and room to grow your skills, we want to hear from you.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="mailto:senecahomespa@gmail.com?subject=Careers%20Inquiry">Email us</a>
+          <a class="btn btn-ghost" href="/contact/">Contact page</a>
+        </div>
+
+        <div class="pill-row">
+          <span class="pill">Competitive pay</span>
+          <span class="pill">Steady work hours</span>
+          <span class="pill">Learn skills &amp; grow</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>Open opportunities</h3>
+        <ul>
+          <li>Fence installer / helper</li>
+          <li>Deck crew / carpenter</li>
+          <li>General labor</li>
+          <li>Driver / material runner</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>What we look for</h2>
+      <p class="muted">Reliability matters. Skills can be taught. Pride in the finish is non-negotiable.</p>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3>Show up &amp; communicate</h3>
+          <p>Be on time, be honest, and keep the team in the loop.</p>
+        </article>
+
+        <article class="card">
+          <h3>Work clean</h3>
+          <p>Respect the jobsite and the homeowner’s space. Details matter.</p>
+        </article>
+
+        <article class="card">
+          <h3>Grow your skills</h3>
+          <p>We want people who want to learn and move up over time.</p>
+        </article>
+      </div>
+
+      <div style="height:14px"></div>
+
+      <h2>How to apply</h2>
+      <p class="muted">
+        Send an email with your name, phone number, what kind of work you’re looking for, and any experience (if you have it).
+        A couple photos of past work is a plus.
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="mailto:senecahomespa@gmail.com?subject=Careers%20Application">Apply by email</a>
+        <a class="btn btn-ghost" href="tel:+17175170958">Call</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Seneca Homes. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
