@@ -117,6 +117,12 @@ a:hover{ text-decoration: underline; }
   outline-offset: 2px;
 }
 
+/* Prevent accidental double overlays */
+.hero::before,
+.hero::after{
+  content: none !important;
+}
+
 /* Hero */
 .hero{
   padding: 56px 0 28px;
@@ -529,3 +535,4 @@ body.has-hero-bg::after{
     min-width: 140px;
   }
 }
+
