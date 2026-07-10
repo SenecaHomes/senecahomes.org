@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!btn || !nav) return;
 
+  const mq = window.matchMedia("(max-width: 640px)");
+
   const closeMenu = () => {
     nav.classList.remove("nav-open");
     btn.setAttribute("aria-expanded", "false");
@@ -27,7 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Close after clicking a menu link
   nav.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("click", () => closeMenu());
+    a.addEventListener("click", () => {
+      if (mq.matches) closeMenu();
+    });
+  });
+
+  window.addEventListener("resize", () => {
+    if (!mq.matches) closeMenu();
   });
 
   // ESC closes

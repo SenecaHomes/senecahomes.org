@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Contact Seneca Homes for an estimate in Lancaster County, PA." />
+  <meta name="description" content="Contact Seneca Homes for a free estimate in Lancaster County, PA." />
   <title>Contact | Seneca Homes</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
   <script src="/assets/js/main.js" defer></script>
@@ -12,20 +12,34 @@
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="/"><img class="brand-logo" src="/images/logo.png" alt="Seneca Homes" /></a>
+    <a class="brand" href="/">
+      <img class="brand-logo" src="/images/logo.png" alt="Seneca Homes" />
+    </a>
+
+    <div class="header-actions">
+      <nav class="nav dropdown" aria-label="Primary navigation">
+        <div class="nav-item">
+          <a class="nav-link" href="/#services" aria-haspopup="true">Services</a>
+          <div class="submenu">
+            <a href="/additions-garages/">Additions &amp; Garages</a>
+            <a href="/outdoor-living-spaces/">Outdoor Living Spaces</a>
+            <a href="/siding/">Siding</a>
+            <a href="/roofs/">Roofs</a>
+            <a href="/windows-doors/">Windows &amp; Doors</a>
+            <a href="/fences/">Fences</a>
+          </div>
+        </div>
+        <a class="nav-link" href="/commercial-projects/">Commercial</a>
+        <a class="nav-link" href="/contact/">Contact</a>
+        <a class="nav-link" href="/careers/">Careers</a>
+        <a class="nav-link" href="/about/">About</a>
+      </nav>
+      <a class="header-cta btn btn-primary btn-large" href="/contact/">Request an Estimate</a>
+    </div>
 
     <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" type="button">
       ☰
     </button>
-
-    <nav class="nav dropdown" aria-label="Primary navigation">
-      <a class="nav-link" href="/">Home</a>
-      <a class="nav-link" href="/fences/">Fences</a>
-      <a class="nav-link" href="/decks/">Decks</a>
-      <a class="nav-link" href="/home-projects/">Home Projects</a>
-      <a class="nav-link" href="/careers/">Careers</a>
-      <a class="nav-link is-active" href="/contact/">Contact</a>
-    </nav>
   </div>
 </header>
 
@@ -35,36 +49,107 @@
       <div class="hero-copy">
         <h1>Contact</h1>
         <p>
-          Send a quick message and we’ll follow up about scope, timing, and an estimate.
+          Share a few details about your project and we’ll follow up about scope, timing, and a free estimate.
         </p>
 
         <div class="hero-cta">
-          <!-- Replace these with real contact info -->
-          <a class="btn btn-primary" href="mailto:senecahomespa@gmail.com?subject=Estimate%20Request">Email</a>
+          <a class="btn btn-primary btn-large" href="mailto:senecahomespa@gmail.com?subject=Free%20Estimate%20Request">Email us</a>
           <a class="btn btn-ghost" href="tel:+17175170958">Call</a>
         </div>
 
         <div class="pill-row">
           <span class="pill">Lancaster County, PA</span>
-          <span class="pill">Fences • Decks • Home Projects</span>
+          <span class="pill">Additions • Outdoor living • Exterior work</span>
         </div>
       </div>
 
       <div class="hero-card">
         <h3>What to include</h3>
         <ul>
-          <li>Project type (fence/deck/home)</li>
+          <li>Project type and goals</li>
           <li>Address or general area</li>
           <li>Photos if you have them</li>
-          <li>Timeline / urgency</li>
+          <li>Timeline or urgency</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-card">
+        <h2>Request a consultation</h2>
+        <p class="muted">A quick form is the easiest way to get started.</p>
+
+        <form id="quoteForm" class="contact-form">
+          <div class="form-grid">
+            <div class="field">
+              <label for="firstName">First Name</label>
+              <input id="firstName" name="firstName" type="text" required />
+            </div>
+            <div class="field">
+              <label for="lastName">Last Name</label>
+              <input id="lastName" name="lastName" type="text" required />
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="phone">Number</label>
+              <input id="phone" name="phone" type="tel" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <div class="hero-cta">
+            <button class="btn btn-primary btn-large" type="submit">Send message</button>
+          </div>
+        </form>
       </div>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div class="container">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand footer-brand" href="/">
+        <img class="brand-logo" src="/images/logo.png" alt="Seneca Homes" />
+      </a>
+      <p>Reliable contracting for homes and commercial properties in Lancaster County, PA.</p>
+      <p><a href="mailto:senecahomespa@gmail.com">senecahomespa@gmail.com</a><br /><a href="tel:+17175170958">(717) 517-0958</a></p>
+    </div>
+    <div>
+      <h3>Services</h3>
+      <ul class="footer-links">
+        <li><a href="/additions-garages/">Additions &amp; Garages</a></li>
+        <li><a href="/outdoor-living-spaces/">Outdoor Living Spaces</a></li>
+        <li><a href="/siding/">Siding</a></li>
+        <li><a href="/roofs/">Roofs</a></li>
+        <li><a href="/windows-doors/">Windows &amp; Doors</a></li>
+        <li><a href="/fences/">Fences</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Explore</h3>
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/commercial-projects/">Commercial Projects</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/careers/">Careers</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
     <p>© 2025 Seneca Homes. All rights reserved.</p>
   </div>
 </footer>
