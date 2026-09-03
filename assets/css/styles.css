@@ -262,7 +262,7 @@ body.commercial-page .menu-toggle { background: #c0c0c0; color: #da2c2c; border-
 
 .page-layout{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 24px; align-items:center; }
 .media-card, .contact-card, .cta-banner{ background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px; }
-.media-card img{ width: 100%; display:block; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; }
+.media-card img{ width: 100%; display:block; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 5px; }
 .gallery-grid{ display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .gallery-card{ background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-soft); }
 .gallery-card img{ width: 100%; display:block; aspect-ratio: 4 / 3; object-fit: cover; }
@@ -272,7 +272,7 @@ body.commercial-page .menu-toggle { background: #c0c0c0; color: #da2c2c; border-
 .contact-form{ display:grid; gap: 12px; }
 .form-grid{ display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .field label{ display:block; font-size: 0.95rem; margin-bottom: 6px; color: rgba(255,255,255,0.82); }
-.field input, .field textarea{ width: 100%; border: 1px solid rgba(255,255,255,0.14); border-radius: 10px; background: rgba(255,255,255,0.06); color: var(--text); padding: 12px 13px; font: inherit; }
+.field input, .field textarea{ width: 100%; border: 1px solid rgba(255,255,255,0.14); border-radius: 5px; background: rgba(255,255,255,0.06); color: var(--text); padding: 12px 13px; font: inherit; }
 .field input:focus, .field textarea:focus{ outline: none; border-color: rgba(201,154,105,0.7); box-shadow: 0 0 0 3px rgba(201,154,105,0.18); }
 .field textarea{ min-height: 130px; resize: vertical; }
 
