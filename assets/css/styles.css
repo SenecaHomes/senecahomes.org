@@ -251,11 +251,6 @@ body.has-hero-bg::after{
 .btn-primary:hover{ background: linear-gradient(135deg, rgba(226,179,118,0.95), rgba(201,154,105,0.95)); }
 .btn-commercial{ background: linear-gradient(135deg, #b91c1c, #ef4444); border-color: #991b1b; color: #fff; box-shadow: 0 3px 5px rgba(0,0,0,0.18); }
 .btn-commercial:hover{ background: linear-gradient(135deg, #991b1b, #dc2626); }
-.commercial-shortcut{ background: #fff; color: #111827; border-color: #d1d5db; }
-.commercial-shortcut h3, .commercial-shortcut p{ color: #111827; }
-.commercial-shortcut p{ color: #4b5563; }
-.commercial-shortcut .btn-commercial{ background: linear-gradient(135deg, #b91c1c, #ef4444); border-color: #991b1b; color: #fff; box-shadow: 0 3px 5px rgba(0,0,0,0.18); }
-.commercial-shortcut .btn-commercial:hover{ background: linear-gradient(135deg, #991b1b, #dc2626); }
 .btn-ghost{ background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.16); color: rgba(255,255,255,0.92); }
 .btn-ghost:hover{ background: rgba(255,255,255,0.13); }
 .btn-service{ padding: 9px 12px; border-radius: 3px; } 
