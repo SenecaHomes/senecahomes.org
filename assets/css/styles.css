@@ -301,6 +301,7 @@ body.commercial-page .menu-toggle { background: #c0c0c0; color: #da2c2c; border-
 .media-card, .contact-card, .cta-banner{ background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px; }
 .media-card img{ width: 100%; display:block; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 5px; }
 .page-layout > div:first-child{ max-width: 58ch; }
+.page-layout > div:first-child p{ color: var(--muted); }
 .gallery-grid{ display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 .gallery-card{ background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-soft); }
 .gallery-card img{ width: 100%; display:block; aspect-ratio: 16 / 10; object-fit: cover; }
