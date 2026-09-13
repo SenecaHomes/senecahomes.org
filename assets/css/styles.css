@@ -14,6 +14,12 @@
 }
 
 *{ box-sizing:border-box; }
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  image-rendering: auto;
+}
 html{ scroll-behavior:smooth; }
 html, body { min-height: 100%; }
 
@@ -223,7 +229,6 @@ body.has-hero-bg::after{
 .card > img{ width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; margin-bottom: 16px; }
 .service-card{ overflow: hidden; padding: 0; }
 .service-card img{ width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
-.siding-photo{ filter: blur(0.3px); }
 .service-card {
   display: flex;
   flex-direction: column;
@@ -316,7 +321,7 @@ body.commercial-page .menu-toggle { background: #c0c0c0; color: #da2c2c; border-
 
 .work-grid{ display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .work-item{ position: relative; overflow: hidden; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.06); box-shadow: 0 12px 36px rgba(0,0,0,0.18); }
-.work-item img{ width: 100%; height: 100%; display:block; object-fit: cover; aspect-ratio: 4 / 3; transform: scale(1.01); transition: transform 220ms ease; }
+.work-item img{ width: 100%; height: 100%; display:block; object-fit: cover; aspect-ratio: 4 / 3; transform: none; transition: transform 220ms ease; }
 .work-item:hover img{ transform: scale(1.05); }
 .work-label{ position:absolute; left: 10px; right: 10px; bottom: 10px; padding: 10px 12px; border-radius: 12px; background: rgba(31,46,58,0.78); border: 1px solid rgba(255,255,255,0.14); color: rgba(255,255,255,0.92); font-size: 13px; line-height: 1.2; backdrop-filter: blur(8px); }
 
